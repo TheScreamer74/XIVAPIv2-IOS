@@ -1,0 +1,13 @@
+{% for type in types.implementing.MemberwiseCopyable %}
+extension {{ type.name }} {
+    
+    func copy({% for var in type.variables %}{{var.name}}: {{var.typeName}} = nil{% if not forloop.last %}, {% endif %}{% endfor %}) -> {{ type.name }} {
+        return {{ type.name }}(
+            {% for var in type.variables %}
+            {{var.name}}: {{var.name}} ?? self.{{var.name}}{% if not forloop.last %},{% endif %}
+            {% endfor %}
+        )
+    }
+}
+
+{% endfor %}
