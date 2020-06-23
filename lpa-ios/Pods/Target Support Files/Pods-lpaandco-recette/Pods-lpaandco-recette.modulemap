@@ -1,6 +1,0 @@
-framework module Pods_lpaandco_recette {
-  umbrella header "Pods-lpaandco-recette-umbrella.h"
-
-  export *
-  module * { export * }
-}

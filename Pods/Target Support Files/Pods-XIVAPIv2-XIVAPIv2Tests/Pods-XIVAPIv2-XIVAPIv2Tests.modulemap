@@ -1,0 +1,6 @@
+framework module Pods_XIVAPIv2_XIVAPIv2Tests {
+  umbrella header "Pods-XIVAPIv2-XIVAPIv2Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
