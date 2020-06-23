@@ -1,0 +1,10 @@
+sources:
+  - lpaandco
+templates:
+  - lpaandco/Sourcery
+output:
+  path: lpaandco/Sourcery/
+  link:
+    project: lpaandco.xcodeproj
+    target: lpaandco
+    group: lpaandco/Sourcery

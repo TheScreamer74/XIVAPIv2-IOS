@@ -1,0 +1,6 @@
+framework module Pods_lpaandco_preprod {
+  umbrella header "Pods-lpaandco-preprod-umbrella.h"
+
+  export *
+  module * { export * }
+}

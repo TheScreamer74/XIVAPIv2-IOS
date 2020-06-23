@@ -1,0 +1,39 @@
+platform :ios, '11.4'
+
+use_frameworks!
+
+def shared
+
+  pod 'Swinject', '~> 2.7.1'
+  pod 'Moya', '~> 14.0'
+  pod 'AlamofireImage', '~> 4.1'
+  pod 'lottie-ios', '~> 3.1'
+
+  pod 'Firebase/Analytics', '~> 6.23'
+  pod 'Firebase/Performance'
+  pod 'Fabric', '~> 1.10'
+  pod 'Crashlytics', '~> 3.14'
+
+  pod 'CHIPageControl/Chimayo', '~> 0.2'
+  pod 'IQKeyboardManagerSwift', '~> 6.5.5'
+
+  pod 'GoogleMaps', '~> 3.8'
+  pod 'GooglePlaces', '~> 3.8'
+
+end
+
+target 'lpaandco' do
+  shared
+end
+
+target 'lpaandco-dev' do
+  shared
+end
+
+target 'lpaandco-recette' do
+  shared
+end
+
+target 'lpaandco-preprod' do
+  shared
+end
