@@ -45,7 +45,7 @@ class ServerTableViewController: UITableViewController {
         let cellIdentifier = "ServerTableViewCell"
         
         guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? ServerTableViewCell else {
-            fatalError("The dequeued cell is not an instance of MealTableViewCell.")
+            fatalError("The dequeued cell is not an instance of ServerTableViewCell.")
         }
         
         let server = servers[indexPath.row]

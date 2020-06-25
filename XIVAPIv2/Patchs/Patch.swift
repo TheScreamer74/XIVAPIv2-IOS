@@ -7,32 +7,24 @@
 //
 
 import UIKit
+import Alamofire
 
-class Patch {
+struct Patch: Decodable {
     
     //MARK: Properties
-    let banner: String?
+    var banner: String? //Change to String? when implementing Moya services
     let exVersion: Int
     let id: Int
     let name: String
-    let releaseDate: Int32
+    let releaseDate: TimeInterval
     let version: String
     
-    //MARK: Initializer
-    init?(banner: String?, exVersion: Int, id: Int, name: String, releaseDate: Int32, version: String){
-        
-        //name and version mustn't be empty
-        guard !name.isEmpty && !version.isEmpty else {
-            return nil
-        }
-        
-        //Initializing values
-        self.banner = banner
-        self.exVersion = exVersion
-        self.id = id
-        self.name = name
-        self.releaseDate = releaseDate
-        self.version = version
-        
+    enum CodingKeys: String, CodingKey {
+        case banner = "Banner"
+        case exVersion = "ExVersion"
+        case id = "ID"
+        case name = "Name"
+        case releaseDate = "ReleaseDate"
+        case version = "Version"
     }
 }

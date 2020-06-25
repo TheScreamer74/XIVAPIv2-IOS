@@ -9,10 +9,10 @@
 import UIKit
 
 class PatchTableViewCell: UITableViewCell {
-    @IBOutlet weak var patchNameLabel: UILabel!
-    @IBOutlet weak var patchVersionLabel: UILabel!
-    @IBOutlet weak var patchImageView: UIImageView!
     
+    @IBOutlet weak var patchImageview: UIImageView!
+    @IBOutlet weak var PatchNameLabel: UILabel!
+    @IBOutlet weak var PatchVersionLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E2BFF4E72926600C5F44FFD /* Pods_XIVAPIv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34DEBF07B2D65C5975E2E24B /* Pods_XIVAPIv2.framework */; };
 		77080C229E376FFD1D5B4F51 /* Pods_XIVAPIv2_XIVAPIv2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 91894A0DCF6C1E378407D572 /* Pods_XIVAPIv2_XIVAPIv2Tests.framework */; };
+		E95BDF3124A4A1EA00D278EE /* PatchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E95BDF3024A4A1EA00D278EE /* PatchViewController.swift */; };
 		E976E28B24A208450095113F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976E28A24A208450095113F /* AppDelegate.swift */; };
 		E976E28D24A208450095113F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976E28C24A208450095113F /* SceneDelegate.swift */; };
 		E976E28F24A208450095113F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E976E28E24A208450095113F /* ViewController.swift */; };
@@ -41,6 +42,7 @@
 		44EA4B010D4FD02733EFAB5A /* Pods-XIVAPIv2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XIVAPIv2.release.xcconfig"; path = "Target Support Files/Pods-XIVAPIv2/Pods-XIVAPIv2.release.xcconfig"; sourceTree = "<group>"; };
 		91894A0DCF6C1E378407D572 /* Pods_XIVAPIv2_XIVAPIv2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_XIVAPIv2_XIVAPIv2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A492708D10BF0D6D380F49 /* Pods-XIVAPIv2-XIVAPIv2Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-XIVAPIv2-XIVAPIv2Tests.debug.xcconfig"; path = "Target Support Files/Pods-XIVAPIv2-XIVAPIv2Tests/Pods-XIVAPIv2-XIVAPIv2Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		E95BDF3024A4A1EA00D278EE /* PatchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchViewController.swift; sourceTree = "<group>"; };
 		E976E28724A208450095113F /* XIVAPIv2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XIVAPIv2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E976E28A24A208450095113F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E976E28C24A208450095113F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 				E976E2B024A23B1A0095113F /* Patch.swift */,
 				E976E2B824A25FCC0095113F /* PatchTableViewController.swift */,
 				E976E2B624A25F960095113F /* PatchTableViewCell.swift */,
+				E95BDF3024A4A1EA00D278EE /* PatchViewController.swift */,
 			);
 			path = Patchs;
 			sourceTree = "<group>";
@@ -352,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E976E2B524A24F210095113F /* ServerTableViewCell.swift in Sources */,
+				E95BDF3124A4A1EA00D278EE /* PatchViewController.swift in Sources */,
 				E976E28F24A208450095113F /* ViewController.swift in Sources */,
 				E976E28B24A208450095113F /* AppDelegate.swift in Sources */,
 				E976E2B324A244FF0095113F /* ServerTableViewController.swift in Sources */,
