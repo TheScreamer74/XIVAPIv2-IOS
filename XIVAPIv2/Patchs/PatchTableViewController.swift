@@ -51,9 +51,7 @@ class PatchTableViewController: UITableViewController {
         if patches[indexPath.row].banner == nil {
            patches[indexPath.row].banner = patches[(indexPath.row)-1].banner
         }
-        let url = URL(string: patches[indexPath.row].banner!)
-        let banner = try? Data(contentsOf: url!)
-        cell.patchImageview.image = UIImage(data: banner!)
+
         
         cell.PatchNameLabel.text = patches[indexPath.row].name
         cell.PatchVersionLabel.text = patches[indexPath.row].version

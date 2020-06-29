@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Character: Decodable{
+struct CharacterShort: Decodable{
     
     let avatar: String?
     let feastMatches: Int

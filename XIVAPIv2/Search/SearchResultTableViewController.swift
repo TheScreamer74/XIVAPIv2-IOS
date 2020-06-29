@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 
 class SearchResultTableViewController: UITableViewController {
-
+    
     var server: String?
     var name: String?
     var results: Search?
@@ -33,24 +33,45 @@ class SearchResultTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        
+        var numRow: Int
+        
+        if results == nil {
+            numRow = 0
+        } else {
+            numRow = results!.results.count
+        }
+        
+        return numRow
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        
+        let cellIdentifier = "CharacterCell"
+        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SearchResultTableViewCell else {
+            fatalError("The dequeued cell is not an instance of ServerTableViewCell.")
+        }
 
-        // Configure the cell...
+        
+        let character = results?.results[indexPath.row]
+        
+        cell.NameCharacterLabel.text = character?.name
+        
+        let url = URL(string: (character?.avatar)!)
+        let avatar = try? Data(contentsOf: url!)
+        cell.CharacterImageView.image = UIImage(data: avatar!) //resize the image
+        
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -87,15 +108,34 @@ class SearchResultTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        
+        switch(segue.identifier ?? ""){
+        case "ShowDetails":
+            guard let characterViewController = segue.destination as? CharacterViewController else {
+                fatalError("Unexpected destination: \(segue.destination)")
+            }
+            
+            guard let selectedCharacterCell = sender as? SearchResultTableViewCell else {
+                fatalError("Unexpected sender: \(sender)")
+            }
+            
+            guard let indexPath = tableView.indexPath(for: selectedCharacterCell) else {
+                fatalError("The selected cell is not being displayed by the table")
+            }
+            
+            let selectedCharacter = results?.results[indexPath.row]
+            characterViewController.characterShort = selectedCharacter
+            
+        default:
+            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
+        }
     }
-    */
+    
 
 }
 
@@ -118,4 +158,3 @@ extension SearchResultTableViewController {
             }
     }
 }
-

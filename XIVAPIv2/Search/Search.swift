@@ -8,11 +8,11 @@
 
 import Foundation
 
+
 struct Search: Decodable{
     
     let pagination: Pagination
-    let results: [Character]
-
+    let results: [CharacterShort]
     
     enum CodingKeys: String, CodingKey {
         
@@ -21,3 +21,4 @@ struct Search: Decodable{
 
     }
 }
+
