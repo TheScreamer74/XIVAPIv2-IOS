@@ -1,17 +1,16 @@
 //
-//  SearchResultTableViewCell.swift
+//  SearchOtherResultsTableViewCell.swift
 //  XIVAPIv2
 //
-//  Created by Thomas on 29/06/2020.
+//  Created by Thomas on 01/07/2020.
 //  Copyright © 2020 Thomas. All rights reserved.
 //
 
 import UIKit
 
-class SearchResultTableViewCell: UITableViewCell {
-    @IBOutlet weak var NameCharacterLabel: UILabel!
-    @IBOutlet weak var CharacterImageView: UIImageView!
-    
+class SearchOtherResultsTableViewCell: UITableViewCell {
+    @IBOutlet weak var iconImageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

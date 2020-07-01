@@ -9,11 +9,11 @@
 import UIKit
 import Alamofire
 
-class SearchResultTableViewController: UITableViewController {
+class SearchCharacterResultTableViewController: UITableViewController {
     
     var server: String?
     var name: String?
-    var results: Search?
+    var results: SearchCharacter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ class SearchResultTableViewController: UITableViewController {
         
         let cellIdentifier = "CharacterCell"
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SearchResultTableViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? SearchCharacterResultTableViewCell else {
             fatalError("The dequeued cell is not an instance of ServerTableViewCell.")
         }
 
@@ -120,7 +120,7 @@ class SearchResultTableViewController: UITableViewController {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             
-            guard let selectedCharacterCell = sender as? SearchResultTableViewCell else {
+            guard let selectedCharacterCell = sender as? SearchCharacterResultTableViewCell else {
                 fatalError("Unexpected sender: \(sender)")
             }
             
@@ -139,14 +139,14 @@ class SearchResultTableViewController: UITableViewController {
 
 }
 
-extension SearchResultTableViewController {
+extension SearchCharacterResultTableViewController {
     func fetchCharacters() {
         
         let parameters: Parameters = ["name": name!, "server": server!]
         //1
         AF.request("https://xivapi.com/character/search", parameters: parameters)
             .validate()
-            .responseDecodable(of: Search.self){
+            .responseDecodable(of: SearchCharacter.self){
                 (response) in
                 guard let results = response.value else {
                     return

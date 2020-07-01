@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class SearchCharacterViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     @IBOutlet weak var pickerServerViewPicker: UIPickerView!
     @IBOutlet weak var searchBarTextField: UITextField!
@@ -59,14 +59,14 @@ class SearchViewController: UIViewController, UIPickerViewDelegate, UIPickerView
         
         switch(segue.identifier ?? ""){
         case "Search":
-            guard let searchResultTableViewController = segue.destination as? SearchResultTableViewController else {
+            guard let searchCharacterResultTableViewController = segue.destination as? SearchCharacterResultTableViewController else {
                 fatalError("Unexpected destination: \(segue.destination)")
             }
             
             let selectedValue = pickerServerViewPicker.selectedRow(inComponent: 0)
             
-            searchResultTableViewController.server = pickerData[selectedValue]
-            searchResultTableViewController.name = searchBarTextField.text
+            searchCharacterResultTableViewController.server = pickerData[selectedValue]
+            searchCharacterResultTableViewController.name = searchBarTextField.text
             
             
         default:

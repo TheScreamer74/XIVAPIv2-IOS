@@ -1,24 +1,22 @@
 //
-//  Search.swift
+//  OtherSearchResults.swift
 //  XIVAPIv2
 //
-//  Created by Thomas on 25/06/2020.
+//  Created by Thomas on 01/07/2020.
 //  Copyright © 2020 Thomas. All rights reserved.
 //
 
 import Foundation
 
-
-struct Search: Decodable{
+struct SearchOther: Decodable{
     
     let pagination: Pagination
-    let results: [CharacterShort]
+    let results: [Other]
     
     enum CodingKeys: String, CodingKey {
         
         case pagination = "Pagination"
         case results = "Results"
-
+        
     }
 }
-

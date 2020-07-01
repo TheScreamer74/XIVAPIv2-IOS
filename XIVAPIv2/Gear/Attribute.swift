@@ -13,20 +13,20 @@ struct Attributes: Decodable{ /*Waring FIND THE NAME OF EACH ATTRIBUTE IT WILL B
     let three: Int
     let four: Int
     let five: Int
-    let six: Int
-    let seven: Int
-    let eight: Int
-    let nineteen: Int
-    let twenty: Int
-    let twentyone: Int
-    let twentytwo: Int
-    let twentyfour: Int
-    let twentyseven: Int
-    let thirtythree: Int
-    let threetyfour: Int
-    let fourtyfour: Int
-    let fourtyfive: Int
-    let fourtysix: Int
+    let six: Int?
+    let seven: Int?
+    let eight: Int?
+    let nineteen: Int?
+    let twenty: Int?
+    let twentyone: Int?
+    let twentytwo: Int?
+    let twentyfour: Int?
+    let twentyseven: Int?
+    let thirtythree: Int?
+    let threetyfour: Int?
+    let fourtyfour: Int?
+    let fourtyfive: Int?
+    let fourtysix: Int?
     
     enum CodingKeys: String, CodingKey {
         case one = "1"
