@@ -9,25 +9,23 @@
 import Foundation
 
 struct Job: Decodable{
-    
-    let classId: Int
+    let _class: NClass
     let expLevel: Int
     let expLevelMax: Int
     let expLevelTogo: Int
     let isSpecialised: Bool
-    let jobId: Int
+    let jobDetailed: JobDetailed
     let level: Int
     let name: String
     let unlockedState: UnlockedState
     
     enum CodingKeys: String, CodingKey {
-        
-        case classId = "ClassID"
+        case _class = "Class"
         case expLevel = "ExpLevel"
         case expLevelMax = "ExpLevelMax"
         case expLevelTogo = "ExpLevelTogo"
         case isSpecialised = "IsSpecialised"
-        case jobId = "JobID"
+        case jobDetailed = "Job"
         case level = "Level"
         case name = "Name"
         case unlockedState = "UnlockedState"

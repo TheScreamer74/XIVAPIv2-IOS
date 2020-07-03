@@ -12,14 +12,14 @@ struct Gear: Decodable {
     
     let creator: Int?
     let dye: Int?
-    let id: Int
-    let materia: [Int]
-    let mirage: Int?
+    let item: Item
+    let materia: [Materia]
+    let mirage: Mirage?
     
       enum CodingKeys: String, CodingKey {
         case creator = "Creatoir"
         case dye = "Dye"
-        case id = "ID"
+        case item = "Item"
         case materia = "Materia"
         case mirage = "Mirage"
         

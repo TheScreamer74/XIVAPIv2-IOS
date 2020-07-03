@@ -18,22 +18,24 @@ struct Character: Decodable{
     let gearSet: GearSet
     let gender: Int
     let grandCompany: GrandCompany
-    let guardianDeity: Int
+    let guardianDeity: GuardianDeity
     let id: Int
     let lang: String?
     let minions: [String?] // A FAIRE PLUS TARD
+    //ajouter toutes les references a minion
     let mounts: [String?] // A FAIRE PLUS TARD
+    //ajouter toutes les references a minion
     let name: String
     let nameday: String
     let parsedate: Int
     let portrait: String
     let pvpTeamId: Int?
-    let race: Int
+    let race: Race
     let server: String
-    let title: Int
+    let title: Title
     let titleTop: Bool
-    let town: Int
-    let tribe: Int
+    let town: Town
+    let tribe: Tribe
     
     enum CodingKeys: String, CodingKey {
         case activeClassJob = "ActiveClassJob"

@@ -58,6 +58,23 @@ class CharacterViewController: UIViewController {
     @IBOutlet weak var labelLevelFSH: UILabel!
     
     
+    //Gear Slot
+    @IBOutlet weak var primaryWeaponImageView: UIImageView!
+    @IBOutlet weak var helmetImageView: UIImageView!
+    @IBOutlet weak var chestImageView: UIImageView!
+    @IBOutlet weak var glovesImageView: UIImageView!
+    @IBOutlet weak var beltImageView: UIImageView!
+    @IBOutlet weak var legImageView: UIImageView!
+    @IBOutlet weak var footImageView: UIImageView!
+    @IBOutlet weak var secondaryWeaponImageView: UIImageView!
+    @IBOutlet weak var earsImageView: UIImageView!
+    @IBOutlet weak var necklaceImageView: UIImageView!
+    @IBOutlet weak var bracerImageView: UIImageView!
+    @IBOutlet weak var ring1ImageView: UIImageView!
+    @IBOutlet weak var ring2ImageView: UIImageView!
+    @IBOutlet weak var soulCrystalImageView: UIImageView!
+    
+    
     var characterShort: CharacterShort?
     var characterDetailed: CharacterDetailed?
 
@@ -89,7 +106,7 @@ class CharacterViewController: UIViewController {
 extension CharacterViewController {
     func fetchCharacter() {
         
-        let parameters: Parameters = ["data": "AC,CJ"]
+        let parameters: Parameters = ["data": "AC,CJ", "extended": 1]
         let url = "https://xivapi.com/character/\(characterShort?.id ?? 0)"
         //1
         AF.request(url, parameters: parameters)
@@ -105,7 +122,7 @@ extension CharacterViewController {
                 self.characterDetailed = results
                 
                 self.LabelNameCharacter.text = self.characterDetailed?.character.name
-                let url = URL(string: (self.characterDetailed?.character.portrait)!)
+                var url = URL(string: (self.characterDetailed?.character.portrait)!)
                 let avatar = try? Data(contentsOf: url!)
                 self.AvatarImageView.image = UIImage(data: avatar!)
                 
@@ -138,8 +155,47 @@ extension CharacterViewController {
                 self.labelLevelBLU.text = "\(self.characterDetailed!.character.classJobs[17].level)"
                 
                 
-                
-                
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.mainHand.item.icon)"))
+                var icon = try? Data(contentsOf: url!)
+                self.primaryWeaponImageView.image = UIImage(data: icon!)
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.head.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.helmetImageView.image = UIImage(data: icon!)
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.body.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.chestImageView.image = UIImage(data: icon!)
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.hands.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.glovesImageView.image = UIImage(data: icon!)
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.waist.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.beltImageView.image = UIImage(data: icon!)
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.legs.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.legImageView.image = UIImage(data: icon!)
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.feet.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.footImageView.image = UIImage(data: icon!)
+                /*
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear..item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.footImageView.image = UIImage(data: icon!)*/
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.nacklace.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.necklaceImageView.image = UIImage(data: icon!)
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.bracelets.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.bracerImageView.image = UIImage(data: icon!)
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.ring1.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.ring1ImageView.image = UIImage(data: icon!)
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.ring2.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.ring2ImageView.image = UIImage(data: icon!)/*
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.feet.item.icon)"))
+                icon = try? Data(contentsOf: url!)
+                self.footImageView.image = UIImage(data: icon!)*/
+
                 
                 
             }

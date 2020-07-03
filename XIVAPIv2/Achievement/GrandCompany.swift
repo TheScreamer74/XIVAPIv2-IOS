@@ -9,12 +9,12 @@
 import Foundation
 
 struct GrandCompany: Decodable {
-    let nameId: Int
-    let rankId: Int
+    let company: Company
+    let rank: Rank
     
       enum CodingKeys: String, CodingKey {
-        case nameId = "NameID"
-        case rankId = "RankID"
+        case company = "Company"
+        case rank = "Rank"
         
     }
 }
