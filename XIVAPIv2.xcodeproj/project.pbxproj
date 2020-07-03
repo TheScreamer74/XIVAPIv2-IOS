@@ -192,27 +192,6 @@
 		E924EFE424A9E2CD008A18B8 /* Achievement */ = {
 			isa = PBXGroup;
 			children = (
-				E924EFFF24AC85E9008A18B8 /* Other.swift */,
-				E924F01F24AF5F32008A18B8 /* GuardianDeity.swift */,
-				E924F02124AF6042008A18B8 /* Race.swift */,
-				E924F02324AF6084008A18B8 /* Title.swift */,
-				E924F02524AF60C6008A18B8 /* Town.swift */,
-				E924F02724AF6100008A18B8 /* Tribe.swift */,
-				E924EFFA24A9F4C6008A18B8 /* GrandCompany.swift */,
-				E924F01B24AF5D22008A18B8 /* Company.swift */,
-				E924F01D24AF5DC3008A18B8 /* Rank.swift */,
-				E924EFEF24A9E618008A18B8 /* Gear.swift */,
-				E924EFF124A9E625008A18B8 /* GearSet.swift */,
-				E924EFF324A9E64A008A18B8 /* Attributes.swift */,
-				E924EFF724A9EB59008A18B8 /* GearParts.swift */,
-				E924F01124AF3738008A18B8 /* Atribute.swift */,
-				E924F01724AF3A53008A18B8 /* Materia.swift */,
-				E924F01924AF3B0B008A18B8 /* Mirage.swift */,
-				E924EFEA24A9E4BF008A18B8 /* Job.swift */,
-				E924EFEC24A9E587008A18B8 /* UnlockedState.swift */,
-				E924F00B24AF2891008A18B8 /* NClass.swift */,
-				E924F00D24AF2923008A18B8 /* ClassJobCategory.swift */,
-				E924F00F24AF3539008A18B8 /* JobDetailed.swift */,
 				E924EFE524A9E2FB008A18B8 /* Achievement.swift */,
 				E924EFE724A9E30A008A18B8 /* AchivementList.swift */,
 			);
@@ -222,6 +201,11 @@
 		E924EFE924A9E48E008A18B8 /* Job */ = {
 			isa = PBXGroup;
 			children = (
+				E924EFEA24A9E4BF008A18B8 /* Job.swift */,
+				E924EFEC24A9E587008A18B8 /* UnlockedState.swift */,
+				E924F00B24AF2891008A18B8 /* NClass.swift */,
+				E924F00D24AF2923008A18B8 /* ClassJobCategory.swift */,
+				E924F00F24AF3539008A18B8 /* JobDetailed.swift */,
 			);
 			path = Job;
 			sourceTree = "<group>";
@@ -229,6 +213,13 @@
 		E924EFEE24A9E60D008A18B8 /* Gear */ = {
 			isa = PBXGroup;
 			children = (
+				E924EFEF24A9E618008A18B8 /* Gear.swift */,
+				E924EFF124A9E625008A18B8 /* GearSet.swift */,
+				E924EFF324A9E64A008A18B8 /* Attributes.swift */,
+				E924F01124AF3738008A18B8 /* Atribute.swift */,
+				E924EFF724A9EB59008A18B8 /* GearParts.swift */,
+				E924F01724AF3A53008A18B8 /* Materia.swift */,
+				E924F01924AF3B0B008A18B8 /* Mirage.swift */,
 			);
 			path = Gear;
 			sourceTree = "<group>";
@@ -236,6 +227,9 @@
 		E924EFF924A9F4B2008A18B8 /* Company */ = {
 			isa = PBXGroup;
 			children = (
+				E924EFFA24A9F4C6008A18B8 /* GrandCompany.swift */,
+				E924F01B24AF5D22008A18B8 /* Company.swift */,
+				E924F01D24AF5DC3008A18B8 /* Rank.swift */,
 			);
 			path = Company;
 			sourceTree = "<group>";
@@ -243,6 +237,12 @@
 		E924EFFE24AC85C7008A18B8 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				E924EFFF24AC85E9008A18B8 /* Other.swift */,
+				E924F01F24AF5F32008A18B8 /* GuardianDeity.swift */,
+				E924F02124AF6042008A18B8 /* Race.swift */,
+				E924F02324AF6084008A18B8 /* Title.swift */,
+				E924F02524AF60C6008A18B8 /* Town.swift */,
+				E924F02724AF6100008A18B8 /* Tribe.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
