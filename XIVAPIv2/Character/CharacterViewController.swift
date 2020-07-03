@@ -176,10 +176,10 @@ extension CharacterViewController {
                 url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.feet.item.icon)"))
                 icon = try? Data(contentsOf: url!)
                 self.footImageView.image = UIImage(data: icon!)
-                /*
-                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear..item.icon)"))
+                
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.earrings.item.icon)"))
                 icon = try? Data(contentsOf: url!)
-                self.footImageView.image = UIImage(data: icon!)*/
+                self.earsImageView.image = UIImage(data: icon!)
                 url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.nacklace.item.icon)"))
                 icon = try? Data(contentsOf: url!)
                 self.necklaceImageView.image = UIImage(data: icon!)
@@ -191,10 +191,10 @@ extension CharacterViewController {
                 self.ring1ImageView.image = UIImage(data: icon!)
                 url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.ring2.item.icon)"))
                 icon = try? Data(contentsOf: url!)
-                self.ring2ImageView.image = UIImage(data: icon!)/*
-                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.feet.item.icon)"))
+                self.ring2ImageView.image = UIImage(data: icon!)
+                url = URL(string: ("https://xivapi.com/\(self.characterDetailed!.character.gearSet.gear.soulCrystal.item.icon)"))
                 icon = try? Data(contentsOf: url!)
-                self.footImageView.image = UIImage(data: icon!)*/
+                self.soulCrystalImageView.image = UIImage(data: icon!)
 
                 
                 
